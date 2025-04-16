@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunil & Archana's 25th Anniversary</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><span id="sunil">Sunil</span> & <span id="archu">Archana</span></div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div> 
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="note.html">Note</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="herotxt">Welcome to Our 25th Anniversary Celebration!</h1>
+      <p>We’re thrilled to celebrate 25 wonderful years of love, laughter, and life together—and we’re doing it in true Indian wedding style!</p>
+    </div>
+  </section>
+  <main>
+
+
+
+    <section class="divider"></section>
+
+    <section class="details">
+      <h2>Event Details</h2>
+      <ul>
+        <li><strong>Date:</strong> May 3rd, 2025</li>
+        <li><strong>Theme:</strong> Indian Wedding Style!</li>
+        <li><strong>Dress Code:</strong> Traditional Indian or colorful semi-formal attire</li>
+        <li><strong>Location:</strong> Ambrosia Banquet & Events<br />638 Fisgard St, Victoria, BC V8W 1R6</li>
+      </ul>
+    </section>
+
+    <section class="divider"></section>
+
+    <section class="timeline">
+      <h2 >Evening Timeline</h2>
+      <ul id="timeline">
+        <li><strong>5:00 PM – Welcome:</strong> Join us for greetings, blessings, and a warm welcome as guests arrive.</li>
+        <li><strong>5:30 PM – Snacks & Refreshments:</strong> Mingle, and enjoy some tasty bites before the celebration officially begins.</li>
+        <li><strong>6:15 PM – Couple-Entry:</strong> Watch us make a memorable entrance, Indian wedding style!</li>
+        <li><strong>6:30 PM – On-Stage Celebration:</strong> Photos with guests, cultural moments, followed by Jai Mala.</li>
+        <li><strong>7:30 PM – Family & Friends Performances:</strong> Enjoy heartfelt dances, surprise acts, and joyful performances from our loved ones.</li>
+        <li><strong>8:30 PM onwards – Dinner, Drinks & DJ:</strong> Followed by dancing! Let the celebration continue on the dance floor!</li>
+      </ul>
+    </section>
+
+    <section class="divider"></section>
+
+    <section class="gallery-preview">
+      <h2>Stay Tuned!</h2>
+      <p>Our celebration memories don’t end on the day!<br />
+      We’ll be posting a full photo gallery of the event right here on this website—so you can relive the joy, colors, and special moments with us.</p>
+      <p>Please check back about 1–2 weeks after the celebration, when all the pictures will be uploaded.</p>
+      <p>From smiles to dance moves to surprise moments—you won’t want to miss them!</p>
+    </section>
+
+    <section class="divider"></section>
+
+    <section class="closing">
+      <img src="images/india.jpeg" >
+
+      <p id="closing">We’re so excited to celebrate this once-in-a-lifetime milestone with you.<br />
+      Come with love in your heart.</p>
+      <p><strong>With love,<br />Dubay’s</strong></p>
+    </section>
+
+    <section class="divider"></section>
+
+    <h2>Gifting From the Heart</h2>
+    <p>We are not accepting physical gifts for this celebration.
+      Instead, we invite you to contribute to our honeymoon travel fund—a gift that will help us create beautiful new memories together.
+      Your thoughtful gesture and blessings will be cherished as we begin this exciting new chapter.</p>
+
+    <div class="gift-option">
+      <h3>1. E-transfer</h3>
+      <p>Email: <strong>aryan-dubay_2005@outlook.com</strong></p>
+      <img src="images/qr-etransfer.png" alt="QR Code for E-transfer" class="qr">
+    </div>
+
+    <div class="gift-option">
+      <h3>2. PayPal</h3>
+      <a href="https://paypal.me/AryanDubay?country.x=CA&locale.x=en_US" target="_blank" class="paypal-button">
+        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" style="height: 24px; margin-right: 10px;" />
+        Send a Gift via PayPal
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sunil & Archana Dubay</p>
+  </footer>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

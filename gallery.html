@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Sunil & Archana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><span id="sunil">Sunil</span> & <span id="archu">Archana</span></div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div> 
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="note.html">Note</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Beutiful Memories</h2>
+    <section class="gallery-section">
+      <div class="gallery-grid">
+        <img src="images/gallery/romantic.jpeg" alt="Photo 1">
+        <img src="images/gallery/beach.jpeg" alt="Photo 2">
+        <img src="images/gallery/latest.jpeg" alt="Photo 3">
+        <img src="images/gallery/heart.jpeg" alt="Photo 4">
+        <img src="images/gallery/hero1.jpeg" alt="Photo 5">
+        <img src="images/gallery/oldpic.jpeg" alt="Photo 6">      
+        <img src="images/gallery/p1.jpeg" alt="Photo 7">
+        <img src="images/gallery/p2.jpeg" alt="Photo 8">
+        <img src="images/gallery/p3.jpeg" alt="Photo 9">
+        <img src="images/gallery/p4.jpeg" alt="Photo 10">
+        <img src="images/gallery/p5.jpeg" alt="Photo 11">
+        <img src="images/gallery/p6.jpeg" alt="Photo 12">
+        <!-- Add more images as needed -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sunil & Archana Dubay</p>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
