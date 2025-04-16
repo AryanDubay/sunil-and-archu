@@ -12,6 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 main {
@@ -272,6 +273,20 @@ li::before {
     max-height: 300px;
     z-index: 4;
   }
+  .hero-image {
+    object-fit: cover;
+    max-width: 90%;
+    height: auto;
+  }
+
+  #qrCode {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+.hero{
+  max-width: 74%;
+}
 }
 
 .paypal-button {
@@ -361,4 +376,8 @@ color: #1d8db9;
 
 #archu{
 color: #c44569;
+}
+
+.closImg{
+  width: 100%;
 }

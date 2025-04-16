@@ -28,7 +28,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 id="herotxt">Welcome to Our 25th Anniversary Celebration!</h1>
-      <p>We’re thrilled to celebrate 25 wonderful years of love, laughter, and life together—and we’re doing it in true Indian wedding style!</p>
+      <p>We’re thrilled to celebrate 25 wonderful years of love, laughter, and life together—and we’re doing it in Indian wedding style!</p>
     </div>
   </section>
   <main>
@@ -40,9 +40,9 @@
     <section class="details">
       <h2>Event Details</h2>
       <ul>
-        <li><strong>Date:</strong> May 3rd, 2025</li>
+        <li><strong>Date:</strong> May 3rd, 2025 | @<b>5:00pm</b></li>
         <li><strong>Theme:</strong> Indian Wedding Style!</li>
-        <li><strong>Dress Code:</strong> Traditional Indian or colorful semi-formal attire</li>
+        <li><strong>Dress Code:</strong> Traditional Indian or Traditional attire with a colorful twist</li>
         <li><strong>Location:</strong> Ambrosia Banquet & Events<br />638 Fisgard St, Victoria, BC V8W 1R6</li>
       </ul>
     </section>
@@ -54,10 +54,10 @@
       <ul id="timeline">
         <li><strong>5:00 PM – Welcome:</strong> Join us for greetings, blessings, and a warm welcome as guests arrive.</li>
         <li><strong>5:30 PM – Snacks & Refreshments:</strong> Mingle, and enjoy some tasty bites before the celebration officially begins.</li>
-        <li><strong>6:15 PM – Couple-Entry:</strong> Watch us make a memorable entrance, Indian wedding style!</li>
+        <li><strong>6:15 PM – Couple-Entry:</strong> Watch us make a memorable entrance.</li>
         <li><strong>6:30 PM – On-Stage Celebration:</strong> Photos with guests, cultural moments, followed by Jai Mala.</li>
         <li><strong>7:30 PM – Family & Friends Performances:</strong> Enjoy heartfelt dances, surprise acts, and joyful performances from our loved ones.</li>
-        <li><strong>8:30 PM onwards – Dinner, Drinks & DJ:</strong> Followed by dancing! Let the celebration continue on the dance floor!</li>
+        <li><strong>8:30 PM onwards – Dinner, Drinks:</strong> Followed by dancing! Let the celebration continue on the dance floor!</li>
       </ul>
     </section>
 
@@ -66,7 +66,7 @@
     <section class="gallery-preview">
       <h2>Stay Tuned!</h2>
       <p>Our celebration memories don’t end on the day!<br />
-      We’ll be posting a full photo gallery of the event right here on this website—so you can relive the joy, colors, and special moments with us.</p>
+      We’ll be posting a full photo gallery of the event right here on this website—so you can relive the joy, love, and special moments with us.</p>
       <p>Please check back about 1–2 weeks after the celebration, when all the pictures will be uploaded.</p>
       <p>From smiles to dance moves to surprise moments—you won’t want to miss them!</p>
     </section>
@@ -74,7 +74,7 @@
     <section class="divider"></section>
 
     <section class="closing">
-      <img src="images/india.jpeg" >
+      <img class="closImg" src="images/gallery/closePic.jpg" >
 
       <p id="closing">We’re so excited to celebrate this once-in-a-lifetime milestone with you.<br />
       Come with love in your heart.</p>
@@ -91,7 +91,8 @@
     <div class="gift-option">
       <h3>1. E-transfer</h3>
       <p>Email: <strong>aryan-dubay_2005@outlook.com</strong></p>
-      <img src="images/qr-etransfer.png" alt="QR Code for E-transfer" class="qr">
+      <img src="images/qr-etransfer.png" alt="QR Code" id="qrCode" style="cursor: pointer;" title="Click to copy QR code" />
+      <p id="copyStatus" style="color: green; display: none;">Email copied!</p>
     </div>
 
     <div class="gift-option">
@@ -113,6 +114,23 @@
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('open');
     }
+
+    const qrImage = document.getElementById("qrCode");
+  const statusMsg = document.getElementById("copyStatus");
+  const emailToCopy = "aryan-dubay_2005@outlook.com"; 
+  qrImage.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(emailToCopy);
+      statusMsg.style.display = "block";
+      setTimeout(() => {
+        statusMsg.style.display = "none";
+      }, 2000);
+    } catch (err) {
+      alert("Copy failed.");
+      console.error(err);
+    }
+  });
+
   </script>
 </body>
 </html>
