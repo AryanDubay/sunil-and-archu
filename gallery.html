@@ -26,15 +26,15 @@
   <main>
     <h2>Our Beutiful Memories</h2>
     <section class="gallery-section">
-      <div class="gallery-grid">
+      <div class="gallery-grid" id="gallery">
         <img src="images/gallery/romantic.jpeg" alt="Photo 1">
         <img src="images/gallery/beach.jpeg" alt="Photo 2">
         <img src="images/gallery/latest.jpeg" alt="Photo 3">
         <img src="images/gallery/heart.jpeg" alt="Photo 4">
-<!--    <img src="images/gallery/hero1.jpeg" alt="Photo 5">
+        <img src="images/gallery/hero1.jpeg" alt="Photo 5">
         <img src="images/gallery/oldpic.jpeg" alt="Photo 6">      
         <img src="images/gallery/p1.jpeg" alt="Photo 7">
-        <img src="images/gallery/p2.jpeg" alt="Photo 8"> -->
+        <img src="images/gallery/p2.jpeg" alt="Photo 8">
         <img src="images/gallery/p3.jpeg" alt="Photo 9">
         <img src="images/gallery/p4.jpeg" alt="Photo 10">
         <img src="images/gallery/p5.jpeg" alt="Photo 11">
@@ -45,16 +45,61 @@
 
   </main>
 
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Full image">
+  </div>
+
   <footer>
     <p>&copy; 2025 Sunil & Archana Dubay</p>
   </footer>
 
 
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const start = 237;
+    const end = 577;
+  
+    for (let i = start; i <= end; i++) {
+      const img = document.createElement('img');
+      img.src = `images/gallery/happyhungryhues-${i}.jpg`;
+      img.alt = `Gallery image ${i}`;
+      img.loading = 'lazy'; // improves load speed
+      gallery.appendChild(img);
+    }
+  </script>
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('open');
     }
   </script>
+
+<script>
+  // Lightbox functionality
+  const galleryImages = document.querySelectorAll('.gallery-grid img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('show');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('show');
+  }
+
+  // Also close lightbox on background click
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+      closeLightbox();
+    }
+  });
+</script>
+
 </body>
 </html>
